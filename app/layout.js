@@ -2,6 +2,7 @@ import './globals.css'
 // import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Header from '@/components/Header';
 
 import { Poppins } from 'next/font/google';
 
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </Head>
      
-      <body className={`{poppins.className} `}> <Navbar />{children}</body>
+      <body className={`{poppins.className} `}> <Header />{children}</body>
       
     </html>
   )
