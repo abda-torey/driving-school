@@ -2,8 +2,7 @@ import './globals.css'
 // import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import HeroSection from '../components/HeroSection'
-import Header from '@/components/Header';
-import LastNav from '@/components/LastNav';
+
 
 import { Poppins } from 'next/font/google';
 
