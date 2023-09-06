@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection'
 
 
 import { Poppins } from 'next/font/google';
+import Footer from '@/components/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </Head>
      
-      <body className={`{poppins.className} `}> <HeroSection />{children}</body>
+      <body className={`{poppins.className} `}> <HeroSection />{children}<Footer /></body>
       
     </html>
   )
