@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </Head>
      
-      <body className={`{poppins.className} `}> <HeroSection />{children}<Footer /></body>
+      <body className={`{poppins.className} `}> {children}</body>
       
     </html>
   )

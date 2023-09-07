@@ -3,11 +3,13 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Home", href: "#", type: "link" },
+  { name: "Services", href: "serviceSection", type: "scroll" },
+  { name: "About", href: "#", type: "link" },
+  { name: "Contact", href: "/contact", type: "link" },
 ];
 
 export default function HeroSection() {
@@ -42,13 +44,27 @@ export default function HeroSection() {
               </button>
               <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    {item.name}
-                  </a>
+                  item.type === "link" ? (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <ScrollLink
+                      key={item.name}
+                      to={item.href}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+                    >
+                      {item.name}
+                    </ScrollLink>
+                  )
                 ))}
               </div>
             </nav>
@@ -66,7 +82,6 @@ export default function HeroSection() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
 
-                
                 <Image
                   src="/logo.svg"
                   alt="logo"
@@ -88,13 +103,13 @@ export default function HeroSection() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
