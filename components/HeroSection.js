@@ -8,7 +8,7 @@ import { Link as ScrollLink } from "react-scroll";
 const navigation = [
   { name: "Home", href: "#", type: "link" },
   { name: "Services", href: "serviceSection", type: "scroll" },
-  { name: "About", href: "#", type: "link" },
+  { name: "About", href: "/about", type: "link" },
   { name: "Contact", href: "/contact", type: "link" },
 ];
 
