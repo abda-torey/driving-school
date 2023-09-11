@@ -114,7 +114,7 @@ const AboutPage = () => {
                 With an instructor boasting an impeccable 32-year driving
                   record and vast experience coaching teens, we understand the
                   fervor of young adults eager to hit the road. Our tailored
-                  lessons ensure they're equipped with the knowledge and skills
+                  lessons ensure they are equipped with the knowledge and skills
                   to navigate with assurance.
                 </p>
               </div>
